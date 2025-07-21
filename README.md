@@ -1,8 +1,7 @@
 # Trading-Extension-For-Pekora STAFF
-
+This version only works on staff clients, the user version only works on user clients. Please dont ask me why, I litearlly have 0 clue why being staff changes variables LMFAOO
 
 ## Update Logs:
-+ Fixed an issue that prevented servers & groups from being viewed.
 
 ## What is this?
 
