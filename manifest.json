@@ -1,42 +1,33 @@
 {
-  "manifest_version": 3,
-  "name": "Pekora Trade Enhancer - STAFF",
+  "manifest_version": 2,
+  "name": "Pekora Trade Enhancer",
   "version": "1.0",
-  "description": "Enhances the trading experience for pekora.zip. Latest release: https://github.com/kekwami/pekorastaffextension",
-  "action": {
-    "default_title": "Pekora Trade Enhancer - STAFF"
-  },
+  "description": "Enhances the trading experience for pekora.zip",
   "icons": {
     "16": "icon16.png",
     "48": "icon48.png",
     "128": "icon128.png"
   },
   "permissions": [
-    "scripting",
-    "activeTab"
-  ],
-  "host_permissions": [
+    "activeTab",
     "https://www.pekora.zip/*"
   ],
   "content_scripts": [
     {
-      "matches": [
-        "https://www.pekora.zip/*"
-      ],
+      "matches": ["https://www.pekora.zip/*"],
       "js": ["content.js"],
       "run_at": "document_idle"
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"]
   },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self';"
+  "browser_action": {
+    "default_title": "Pekora Trade Enhancer"
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "pekora-trade-enhancer@pekora.zip",
-      "strict_min_version": "109.0"
+      "id": "pekora-trade-enhancer@local"
     }
   }
 }
